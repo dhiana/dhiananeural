@@ -8,8 +8,7 @@ function nets = ddRun()
     %matlabpool('open', 2)
 
     % Configure training functions
-    trainFcns = {'trainbfg', 'traingd', 'traingdm', 'traingda', 'trainlm'};
-    %trainFcns = {'trainlm', 'trainbfg'};
+    trainFcns = {'traingd', 'traingdm', 'traingda', 'trainlm', 'trainbfg'};
 
     % Setup network topology
     hiddenLayerSize = 10;
