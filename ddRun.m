@@ -5,6 +5,8 @@
 
 function nets = ddRun()
 
+    %matlabpool('open', 2)
+
     % Configure training functions
     trainFcns = {'trainbfg', 'traingd', 'traingdm', 'traingda', 'trainlm'};
     %trainFcns = {'trainlm', 'trainbfg'};
@@ -15,6 +17,7 @@ function nets = ddRun()
     % Container para as redes
     nets = {};
 
+    %parfor n=1:length(trainFcns)
     for n=1:length(trainFcns)
         trainFcn = trainFcns{n}
         nets{n} = ddSetupNet(hiddenLayerSize, trainFcn);
