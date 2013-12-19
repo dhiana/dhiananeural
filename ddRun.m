@@ -21,7 +21,7 @@ function nets = ddRun()
     for n=1:length(trainFcns)
         trainFcn = trainFcns{n}
         nets{n} = ddSetupNet(hiddenLayerSize, trainFcn);
-        ddTrain(nets{n});
+        nets{n} = ddTrain(nets{n});
     end
 
     pause
