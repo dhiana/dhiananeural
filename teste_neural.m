@@ -13,13 +13,12 @@ function nets = ddRun()
     hiddenLayerSize = 10;
 
     % Container para as redes
-    nets = [];
+    nets = {};
 
     for n=1:length(trainFcns)
         trainFcn = trainFcns{n}
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
-        net = ddTrain(net);
-        nets = [nets net];
+        nets{n} = ddSetupNet(hiddenLayerSize, trainFcn);
+        ddTrain(nets{n});
     end
 
     pause
