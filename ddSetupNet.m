@@ -32,6 +32,9 @@ function net = ddSetupNet(hiddenLayerSize, trainFcn)
     % Aumentando o número de epochs para gd e gdm convergirem
     %net.trainParam.epochs = 100000;
 
+    % Aumentando validation checks
+    %net.trainParam.max_fail = 50;
+
     % Choose Plot Functions
     % For a list of all plot functions type: help nnplot
     %net.plotFcns = {'plotperform','plottrainstate','ploterrhist', ...
