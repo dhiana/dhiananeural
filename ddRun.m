@@ -11,11 +11,15 @@ function nets = ddRun()
     % Container para as redes
     nets = {};
 
-    %parfor n=1:length(trainFcns)
-    for n=1:length(trainFcns)
-        trainFcn = trainFcns{n}
-        nets{n} = ddSetupNet(hiddenLayerSize, trainFcn);
-        nets{n} = ddTrain(nets{n});
+    % Número de tentativas para uma mesma configuração
+    MAX_TRIES = 3;
+
+    % traingd
+    simple_traingd_net = ddSetupNet(hiddenLayerSize, 'traingd');
+    simple_traingd_nets = {};
+    simple_traingd_trs = {};
+    for n=1:MAX_TRIES
+        [simple_traingd_nets{n}, simple_traingd_trs{n}] = ddTrain(simple_traingd_net);
     end
 
     %pause
