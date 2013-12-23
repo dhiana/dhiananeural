@@ -22,7 +22,7 @@ function nets = ddRun()
     %net.trainParam.lr = 0.3;
     %net.trainParam.max_fail = 50;
 
-    [nets, trs] = ddTrainNets(net);
+    [nets, trs] = ddTrainNets(net, inputs, targets);
 
     [best_net, best_tr] = ddGetBest(nets, trs);
 
