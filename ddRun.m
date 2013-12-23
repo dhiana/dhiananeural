@@ -19,6 +19,9 @@ function nets = ddRun()
 
     [nets, trs] = ddTrainNets(net);
 
+    [best_net, best_tr] = ddGetBest(nets, trs);
+
+    nets = {best_net, best_tr};
 
     %pause
     %exit
