@@ -1,1 +1,1 @@
-    $ matlab -r ddRun -nodesktop -nosplash
+    $ matlab -r ddRun -nodesktop -nosplash -hgVersion 2
