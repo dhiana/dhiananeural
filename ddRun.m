@@ -16,6 +16,10 @@ function nets = ddRun()
 
     % traingd
     simple_traingd_net = ddSetupNet(hiddenLayerSize, 'traingd');
+    %simple_traingd_net.trainParam.epochs = 100000;
+    %simple_traingd_net.trainParam.lr = 0.3;
+    %simple_traingd_net.trainParam.max_fail = 50;
+
     simple_traingd_nets = {};
     simple_traingd_trs = {};
     for n=1:MAX_TRIES
