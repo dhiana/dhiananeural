@@ -3,7 +3,7 @@ function ddPlot(net, tr, inputs, targets, prefix)
     % Test the Network
     outputs = net(inputs);
     errors = gsubtract(targets,outputs);
-    performance = perform(net,targets,outputs)
+    performance = perform(net,targets,outputs);
 
     % Plots
     f1 = figure;
