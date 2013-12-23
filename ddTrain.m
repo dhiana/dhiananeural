@@ -25,10 +25,10 @@ function net = ddTrain(net)
     %view(net)
 
     % Plots
-    figure, plotperform(tr)
-    figure, plottrainstate(tr)
-    figure, plotconfusion(targets,outputs)
-    figure, plotroc(targets,outputs)
+    %figure, plotperform(tr)
+    %figure, plottrainstate(tr)
+    %figure, plotconfusion(targets,outputs)
+    %figure, plotroc(targets,outputs)
     %figure, ploterrhist(errors)
 
 end
