@@ -22,6 +22,9 @@ function nets = ddRun()
         [simple_traingd_nets{n}, simple_traingd_trs{n}] = ddTrain(simple_traingd_net);
     end
 
+    nets{1,1} = [simple_traingd_nets];
+    nets{1,2} = [simple_traingd_trs];
+
     %pause
     %exit
 
