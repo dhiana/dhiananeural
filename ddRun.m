@@ -13,9 +13,9 @@ function nets = ddRun()
 
     % traingd
     net = ddSetupNet(hiddenLayerSize, 'traingd');
-    %simple_traingd_net.trainParam.epochs = 100000;
-    %simple_traingd_net.trainParam.lr = 0.3;
-    %simple_traingd_net.trainParam.max_fail = 50;
+    net.trainParam.epochs = 100;
+    %net.trainParam.lr = 0.3;
+    %net.trainParam.max_fail = 50;
 
     [nets, trs] = ddTrainNets(net);
 
