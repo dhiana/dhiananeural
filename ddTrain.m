@@ -1,4 +1,4 @@
-function net = ddTrain(net)
+function [net, tr] = ddTrain(net)
 
     % Setup dataset
     load thyroid_dataset;
