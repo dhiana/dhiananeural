@@ -3,8 +3,6 @@ function nets = ddRun()
     % Rodar 5 algoritmos de treinamento:
     % Escolhidos: traingd, traingdm, traingda, trainlm e trainbfg
 
-    %matlabpool('open', 2)
-
     % Setup dataset
     load thyroid_dataset;
     inputs = thyroidInputs;
