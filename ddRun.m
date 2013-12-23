@@ -1,8 +1,3 @@
-% Solve a Pattern Recognition Problem with a Neural Network
-%
-% This script assumes these variables are defined:
-%
-
 function nets = ddRun()
 
     %matlabpool('open', 2)
