@@ -1,4 +1,4 @@
-function [net, tr] = getBest(nets, trs)
+function [net, tr] = getBest(nets, trs, train_session)
 
     perfs = [];
 
@@ -11,5 +11,12 @@ function [net, tr] = getBest(nets, trs)
 
     net = nets{i};
     tr = trs{i};
+
+    % Plots nets performance histogram
+    f1 = figure;
+    hist(perfs);
+    title('Training session performance histogram');
+    filename = strcat(train_session, '/', 'nets_hist');
+    print(f1, '-dpng', filename);
 
 end
