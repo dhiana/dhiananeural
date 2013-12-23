@@ -13,17 +13,6 @@ function [net, tr] = ddTrain(net)
     errors = gsubtract(targets,outputs);
     performance = perform(net,targets,outputs)
 
-    % Recalculate Training, Validation and Test Performance
-    trainTargets = targets .* tr.trainMask{1};
-    valTargets = targets  .* tr.valMask{1};
-    testTargets = targets  .* tr.testMask{1};
-    trainPerformance = perform(net,trainTargets,outputs)
-    valPerformance = perform(net,valTargets,outputs)
-    testPerformance = perform(net,testTargets,outputs)
-
-    % View the Network
-    %view(net)
-
     % Plots
     %figure, plotperform(tr)
     %figure, plottrainstate(tr)
