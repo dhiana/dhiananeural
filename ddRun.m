@@ -1,9 +1,9 @@
 function nets = ddRun()
+    % Trabalho de Redes Neurais
+    % Rodar 5 algoritmos de treinamento:
+    % Escolhidos: traingd, traingdm, traingda, trainlm e trainbfg
 
     %matlabpool('open', 2)
-
-    % Configure training functions
-    trainFcns = {'traingd', 'traingdm', 'traingda', 'trainlm', 'trainbfg'};
 
     % Setup network topology
     hiddenLayerSize = 10;
