@@ -12,14 +12,13 @@ function nets = ddRun()
     nets = {};
 
     % traingd
-    simple_traingd_net = ddSetupNet(hiddenLayerSize, 'traingd');
+    net = ddSetupNet(hiddenLayerSize, 'traingd');
     %simple_traingd_net.trainParam.epochs = 100000;
     %simple_traingd_net.trainParam.lr = 0.3;
     %simple_traingd_net.trainParam.max_fail = 50;
 
-    [simple_traingd_nets, simple_traingd_trs] = ddTrainNets(simple_traingd_net);
+    [nets, trs] = ddTrainNets(net);
 
-    nets{1} = [simple_traingd_nets; simple_traingd_trs];
 
     %pause
     %exit
