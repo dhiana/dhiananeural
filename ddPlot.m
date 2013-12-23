@@ -1,11 +1,11 @@
-function ddPlot(net, tr, inputs, targets, prefix, train_session)
+function ddPlot(net, tr, inputs, targets, train_session)
 
     % Test the Network
     outputs = net(inputs);
     errors = gsubtract(targets,outputs);
     performance = perform(net,targets,outputs);
 
-    print_prefix = strcat(train_session, '/', prefix);
+    print_prefix = strcat(train_session, '/');
 
     % Plots
     f1 = figure;
