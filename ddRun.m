@@ -5,6 +5,11 @@ function nets = ddRun()
 
     %matlabpool('open', 2)
 
+    % Setup dataset
+    load thyroid_dataset;
+    inputs = thyroidInputs;
+    targets = thyroidTargets;
+
     % Setup network topology
     hiddenLayerSize = 10;
 
@@ -20,6 +25,8 @@ function nets = ddRun()
     [nets, trs] = ddTrainNets(net);
 
     [best_net, best_tr] = ddGetBest(nets, trs);
+
+    ddPlot(best_net, best_tr, inputs, targets);
 
     nets = {best_net, best_tr};
 
