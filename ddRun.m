@@ -26,7 +26,8 @@ function nets = ddRun()
 
     [best_net, best_tr] = ddGetBest(nets, trs);
 
-    ddPlot(best_net, best_tr, inputs, targets);
+    prefix = 'best_traingd_'
+    ddPlot(best_net, best_tr, inputs, targets, prefix);
 
     nets = {best_net, best_tr};
 
