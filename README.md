@@ -1,1 +1,1 @@
-    $ matlab -r teste_neural -nodesktop -nosplash
+    $ matlab -r ddRun -nodesktop -nosplash
