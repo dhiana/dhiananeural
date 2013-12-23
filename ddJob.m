@@ -7,4 +7,7 @@ function nets = ddJob(train_session, net, inputs, targets)
 
     ddPlot(best_net, best_tr, inputs, targets, train_session);
 
+    filename = strcat('./',train_session,'/','traindata');
+    save(filename,'nets','trs','best_net','best_tr');
+
 end
