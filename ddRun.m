@@ -18,7 +18,7 @@ function nets = ddRun()
         nets{n} = ddTrain(nets{n});
     end
 
-    pause
-    exit
+    %pause
+    %exit
 
 end
