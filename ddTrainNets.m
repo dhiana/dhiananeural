@@ -3,7 +3,7 @@ function [nets trs] = ddTrainNets(net, inputs, targets)
     matlabpool('open', 2)
 
     % Número de tentativas para uma mesma configuração
-    MAX_TRIES = 3;
+    MAX_TRIES = 100;
 
     nets = {};
     trs = {};
