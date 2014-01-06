@@ -19,7 +19,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'trainbfg';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.max_fail = 50;
         nets = ddJob(train_session, net, inputs, targets);
 
@@ -28,7 +28,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'traingd';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.epochs = 10000;
         nets = ddJob(train_session, net, inputs, targets);
 
@@ -37,7 +37,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'traingd';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.lr = 0.3;
         net.trainParam.max_fail = 50;
         net.trainParam.epochs = 10000;
@@ -48,7 +48,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'traingda';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.epochs = 10000;
         nets = ddJob(train_session, net, inputs, targets);
 
@@ -57,7 +57,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'traingda';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.max_fail = 50;
         net.trainParam.epochs = 10000;
         nets = ddJob(train_session, net, inputs, targets);
@@ -67,7 +67,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'traingdm';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.epochs = 10000;
         nets = ddJob(train_session, net, inputs, targets);
 
@@ -76,7 +76,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'traingdm';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.max_fail = 50;
         net.trainParam.epochs = 10000;
         nets = ddJob(train_session, net, inputs, targets);
@@ -86,7 +86,7 @@ function nets = ddRun()
 
         % Setup net
         trainFcn = 'trainlm';
-        net = ddSetupNet(hiddenLayerSize, trainFcn);
+        net = ddSetupNet(hiddenLayerSize, trainFcn, 'classification');
         net.trainParam.max_fail = 50;
         nets = ddJob(train_session, net, inputs, targets);
 

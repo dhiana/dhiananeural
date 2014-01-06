@@ -1,7 +1,11 @@
-function net = ddSetupNet(hiddenLayerSize, trainFcn)
+function net = ddSetupNet(hiddenLayerSize, trainFcn, trainType)
 
     % Create a Pattern Recognition Network
-    net = patternnet(hiddenLayerSize);
+    if strcmp(trainType,'regression')
+        net = fitnet(hiddenLayerSize);
+    else
+        net = patternnet(hiddenLayerSize);
+    end
 
     % Choose Input and Output Pre/Post-Processing Functions
     % For a list of all processing functions type: help nnprocess
@@ -12,8 +16,13 @@ function net = ddSetupNet(hiddenLayerSize, trainFcn)
     % For a list of all data division functions type: help nndivide
     net.divideFcn = 'dividerand';  % Divide data randomly
     net.divideMode = 'sample';  % Divide up every sample
-    net.divideParam.trainRatio = 65/100;
-    net.divideParam.valRatio = 20/100;
+    if strcmp(trainType,'regression')
+    	net.divideParam.trainRatio = 70/100;
+    	net.divideParam.valRatio = 15/100;
+    else
+    	net.divideParam.trainRatio = 65/100;
+    	net.divideParam.valRatio = 20/100;
+    end
     net.divideParam.testRatio = 15/100;
 
     % For help on training function 'trainscg' type: help trainscg
