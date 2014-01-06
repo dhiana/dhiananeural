@@ -28,6 +28,9 @@ function ddPlot(net, tr, inputs, targets, train_session)
     filename = strcat(print_prefix, 'roc');
     print(f4, '-dpng', '-r72', filename);
 
-    %figure, ploterrhist(errors)
+    f5 = figure;
+    plotregression(targets,outputs)
+    filename = strcat(print_prefix, 'regression');
+    print(f5, '-dpng', '-r72', filename);
 
 end
